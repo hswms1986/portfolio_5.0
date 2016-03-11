@@ -1,0 +1,23 @@
+using System;
+
+ public class oddsum
+{
+    public static void Main(string[] args)
+    {
+     long max=0;
+     long sum = 0;
+  
+     Console.WriteLine("Enter Maximum No.:");
+     max = long.Parse(Console.ReadLine());
+     Console.WriteLine(max+":");
+	 
+	 for(int i = 1; i <= max; i++)
+	 {
+	     if(i % 2 != 0)
+	        sum += i;
+	 }
+
+     Console.WriteLine("Sum of Odd no. is:"+max);
+     Console.WriteLine(sum);
+    }
+}
