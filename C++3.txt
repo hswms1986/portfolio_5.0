@@ -1,0 +1,81 @@
+#include <iostream>
+#include <string>
+#include <string.h>
+
+using namespace std;
+
+int main() {
+	string op;
+	int ad, add, sqr, numb, powe;
+	int maxi[5];
+	int mini[5];
+	int a1, a2, a3, a4, a5;
+	int answer;
+	cout << "What operation do you want" << endl;
+
+	cin >> op;
+
+	switch ('op') {
+	case 'sum':
+		cout << " Give me 2 numbers" << endl;
+		cin >> ad;
+		cin >> add;
+		answer = ad + add;
+		cout << answer;
+		break;
+	case 'root':
+		cout << " Give me a number" << endl;
+		cin >> sqr;
+		answer = sqrt(sqr);
+		cout << answer;
+		break;
+	case'powr':
+		cout << " Give me 2 numbers" << endl;
+		cin >> numb;
+		cin >> powe;
+		answer = pow(numb, powe);
+		break;
+	case 'max':
+		cout << "give me 5 numbers" << endl;
+		cin >> maxi[0];
+		cin >> maxi[1];
+		cin >> maxi[2];
+		cin >> maxi[3];
+		cin >> maxi[4];
+		for (int i; i < 5; i++) {
+			if (maxi[i] > answer) {
+				answer = maxi[i];
+			}
+		}
+		cout << answer << endl;
+		break;
+	case 'min':
+		cout << "give me 5 numbers" << endl;
+		cin >> mini[0];
+		cin >> mini[1];
+		cin >> mini[2];
+		cin >> mini[3];
+		cin >> mini[4];
+		for (int i; i < 5; i++) {
+			if (maxi[i] < answer) {
+				answer = maxi[i];
+			}
+		}
+		cout << answer << endl;
+		break;
+	case 'avg':
+		cout << "give me 5 numbers" << endl;
+		cin >> a1;
+		cin >> a2;
+		cin >> a3;
+		cin >> a4;
+		cin >> a5;
+		answer = (a1 + a2 + a3 + a4 + a5) / 5;
+		cout << "The average is" << answer << endl;
+		break;
+	default:
+		cout << "Thats not an operation" << endl;
+
+	}
+
+}

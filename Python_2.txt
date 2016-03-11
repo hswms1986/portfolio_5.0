@@ -1,0 +1,20 @@
+def main():
+    
+    a=int(input("Enter the first side:")) 
+    b=int(input("Enter the second side:")) 
+    c=int(input("Enter the third side:")) 
+  
+
+if (a*a) + (b*b) == (c*c):
+    print "Right Triangle"
+    
+else if (a*a) + (c*c) == (b*b):
+    print "Right Triangle"
+    
+else if (b*b) + (c*c) == (a*a):
+    print "Right Triangle"
+    
+else
+    print "No"
+    
+main()

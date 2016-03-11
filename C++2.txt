@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+#include <stdio.h>
+#include <string.h>
+
+using namespace std;
+
+
+int main() {
+	string word;
+
+	do {
+		cout << "Give me a word:" << endl;
+		cin >> word;
+		string front = &word.at(0);
+		string bw = string(word.rbegin(), word.rend());
+		cout << word << endl;
+		cout << "The word" << word << "backwards is" << bw << endl;
+		if (bw == word) {
+			cout << "This word is a palindrome" << endl;
+		}
+		else {
+			cout << "This word is not a palindrome" << endl;
+		}
+
+		cout << "The string is" << word.length() << "characters long" << endl;
+		cout << "The first half of the word is" << word.substr(0, (word.length()) / 2) << endl;
+		cout << "The first letter is" << front << endl;
+	} while (word != "no");
+
+
+}

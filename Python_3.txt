@@ -1,0 +1,35 @@
+using System;
+using System.Linq;
+
+
+
+class Program
+{
+    static void Main()
+    {
+        var firstName = "";
+        var lastName="";
+        var grade = 0;
+        var studentId = 0;
+        var login = "";
+        var gpa=0.0;
+
+        Console.WriteLine("Please enter the details:\nFirst name:\nLast name:\nGrade(9-12):\nStudent Id:\nUsername:\nGPA(0.0-4.0):");
+
+        firstName = Console.ReadLine();
+        lastName  = Console.ReadLine();
+        grade  = Convert.ToInt32(Console.ReadLine());
+        studentId  = Convert.ToInt32(Console.ReadLine());
+        login  = Console.ReadLine();
+        gpa  = Convert.ToInt32(Console.ReadLine());
+        
+
+        Console.WriteLine("Your Information:\nUsername:{0}", login);
+        Console.WriteLine("Id:{0}", studentId);
+        Console.WriteLine("Name:{0} {1}", lastName,firstName);
+        Console.WriteLine("GPA:{0}", gpa);
+        Console.WriteLine("Grade:{0}", grade);
+        
+        
+    }
+}

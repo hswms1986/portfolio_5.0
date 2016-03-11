@@ -1,0 +1,69 @@
+#include <iostream>
+#include <ostream>
+#include <stdlib.h>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+
+int main() {
+
+	srand(time(NULL));
+	int x = rand() % 100 + 1;
+
+	cout << "Guess a number from 1 to 100:";
+	int guess;
+	cin >> guess;
+	int guesses;
+	char repeat;
+	
+
+
+	do {
+		if (guess < x) {
+			cout << "You guessed too low, guess again" << endl;
+			guesses++;
+			cin >> guess;
+		}
+		else if (guess > x) {
+			cout << "You guessed too high, guess again" << endl;
+			guesses++;
+			cin >> guess;
+		}
+	} while (guess != x);
+
+	if (guess == x) {
+		cout << "You got it, it only took you:" << guesses << "tries" << endl;
+	}
+	cout << "Would you like to play again?";
+		
+		cin >> repeat;
+		do {
+			do {
+				srand(time(NULL));
+				int x = rand() % 100 + 1;
+				cout << "Guess a number please";
+				cin >> guess;
+				if (guess < x) {
+					cout << "You guessed too low, guess again" << endl;
+					guesses++;
+					cin >> guess;
+				}
+				else if (guess > x) {
+					cout << "You guessed too high, guess again" << endl;
+					guesses++;
+					cin >> guess;
+				}
+
+			} while (guess != x);
+
+		} while (repeat = 'Y');
+		if (repeat = 'N'){
+			cout << "Thanks for playing";
+		} 
+		else {
+			cout << "That's not valid";
+		}
+		cin.get();
+	}

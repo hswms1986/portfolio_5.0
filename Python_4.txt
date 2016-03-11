@@ -1,0 +1,15 @@
+x=input("Enter first side:")  
+y=input("Enter second side:")  
+z=input("Enter third side:")   
+    
+def isEquilateral(x, y, z):
+    
+    if x == y and x == z:
+        print "It is equilateral"
+        
+    else:
+        print "It's not equilateral"
+        
+    return;
+   
+isEquilateral(x,y,z)

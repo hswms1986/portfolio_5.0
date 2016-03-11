@@ -1,0 +1,12 @@
+def main():
+    
+    name = input("Hello, what's your name?")
+    print name
+    
+    age = input("What's your age?")
+    print age
+    
+    salary = input("How much do you make?")
+    print salary
+    
+main()
